@@ -4,6 +4,9 @@
 
 Repo: [github.com/nimramumtaz/vspark-prompt-engineering](https://github.com/nimramumtaz/vspark-prompt-engineering)
 
+**Live:** [vspark-prompt-engineering.onrender.com](https://vspark-prompt-engineering.onrender.com) ·
+admin portal at `/admin/login.html` · data stored in Neon Postgres (`portal_state` table).
+
 A complete registration website for **Prompt Engineering**, the AI competition at **VSPARK 2026**,
 COMSATS University Islamabad, Vehari Campus.
 
