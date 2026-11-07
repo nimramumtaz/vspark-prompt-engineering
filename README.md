@@ -1,5 +1,9 @@
 # VSPARK 2026 — Prompt Engineering Registration Portal
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/nimramumtaz/vspark-prompt-engineering)
+
+Repo: [github.com/nimramumtaz/vspark-prompt-engineering](https://github.com/nimramumtaz/vspark-prompt-engineering)
+
 A complete registration website for **Prompt Engineering**, the AI competition at **VSPARK 2026**,
 COMSATS University Islamabad, Vehari Campus.
 
