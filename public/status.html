@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Track Registration — Prompt Engineering · VSPARK 2026</title>
+  <meta name="description" content="Check the status of your VSPARK 2026 Prompt Engineering registration using your team code and leader email." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=10" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="VSPARK home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6" /><stop offset="1" stop-color="#7c3aed" /></linearGradient></defs>
+            <path d="M5 8h5.4l5.6 13.4L21.4 8H27l-8.6 17h-4.8z" fill="url(#vg)" />
+            <path d="M25 5.5l1.1 2.9 2.9 1.1-2.9 1.1L25 13.5l-1.1-2.9L21 9.5l2.9-1.1z" fill="#93b4ff" />
+          </svg>
+        </span>
+        <span class="brand-word">V<span>SPARK</span></span>
+        <span class="brand-sub">Prompt Engineering</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#categories">Categories</a>
+        <a href="/#rules">Rules</a>
+        <a href="/#schedule">Schedule</a>
+        <a href="/status.html" class="active">Track Status</a>
+        <a href="/register.html" class="nav-mobile-cta">Register Now</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-login" href="/admin/login.html">Admin Log in</a>
+        <a class="btn btn-sm" href="/register.html">Register Now<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg></a>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><svg class="icon"><use href="/assets/icons.svg#menu"></use></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Track status</span></nav>
+        <span class="eyebrow">Prompt Engineering</span>
+        <h1>Where is my <span class="grad-text">registration</span>?</h1>
+        <p>Enter your team code and the team leader's email to see the live status of your Prompt Engineering entry.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width:840px">
+        <form class="form-card" id="status-form" novalidate>
+          <div class="field-grid">
+            <div class="field">
+              <label for="code">Team code <span class="req">*</span></label>
+              <input class="input" id="code" name="code" placeholder="PE-26-0001" autocomplete="off" maxlength="24" required />
+              <span class="hint">It was shown right after you registered.</span>
+            </div>
+            <div class="field">
+              <label for="email">Leader email <span class="req">*</span></label>
+              <input class="input" id="email" name="email" type="email" placeholder="you@university.edu.pk" required />
+              <span class="hint">The email used in the registration form.</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn" type="submit" id="status-btn">Check status<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg></button>
+            <a class="link-arrow" href="/register.html">Not registered yet? Register now<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg></a>
+          </div>
+          <div id="status-alert" class="alert alert-error hidden" style="margin-top:20px">
+            <svg class="icon"><use href="/assets/icons.svg#x"></use></svg><span id="status-alert-text"></span>
+          </div>
+        </form>
+
+        <div id="status-result" class="status-card hidden" style="margin-top:26px">
+          <div class="status-head">
+            <div>
+              <span class="eyebrow" style="margin-bottom:6px">Team code</span>
+              <h2 id="r-code" style="font-size:1.5rem">—</h2>
+              <p class="muted" id="r-team" style="font-size:.9rem"></p>
+            </div>
+            <div id="r-badges"></div>
+          </div>
+
+          <div class="status-grid">
+            <div class="status-item"><div class="label">Prompt category</div><div class="value" id="r-category">—</div></div>
+            <div class="status-item"><div class="label">Team leader</div><div class="value" id="r-leader">—</div></div>
+            <div class="status-item"><div class="label">University</div><div class="value" id="r-university">—</div></div>
+            <div class="status-item"><div class="label">Team size</div><div class="value" id="r-size">—</div></div>
+            <div class="status-item"><div class="label">Registration fee</div><div class="value" id="r-fee">—</div></div>
+            <div class="status-item"><div class="label">Submitted on</div><div class="value" id="r-date">—</div></div>
+          </div>
+
+          <div class="progress-track">
+            <div class="progress-step done"><span class="dot">1</span>Submitted</div>
+            <div class="progress-step" id="step-review"><span class="dot">2</span>Under review</div>
+            <div class="progress-step" id="step-final"><span class="dot">3</span>Confirmed</div>
+          </div>
+
+          <div id="r-message" class="alert alert-info hidden" style="margin-top:18px">
+            <svg class="icon"><use href="/assets/icons.svg#mail"></use></svg><span id="r-message-text"></span>
+          </div>
+
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:26px">
+            <a class="btn btn-outline btn-sm" href="/#schedule">Event schedule<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg></a>
+            <a class="btn btn-ghost btn-sm" style="color:var(--ink);border-color:var(--line-strong);background:#fff" href="mailto:hodes@cuivehari.edu.pk">Contact organisers</a>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top:40px">
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="/assets/icons.svg#check-circle"></use></svg></div>
+            <h3>Pending</h3>
+            <p>Your entry reached us and is queued for verification by the organising team.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="/assets/icons.svg#shield"></use></svg></div>
+            <h3>Approved</h3>
+            <p>Your seat is confirmed. Bring your team code and student ID on December 10.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon"><svg class="icon"><use href="/assets/icons.svg#x"></use></svg></div>
+            <h3>Rejected</h3>
+            <p>Usually a duplicate entry or incomplete details — contact us and we will help.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/cui-emblem.svg" alt="COMSATS University Islamabad, Vehari Campus" />
+            <span class="brand-word">V<span>SPARK</span></span>
+          </div>
+          <p class="footer-about">The official registration portal for the VSPARK 2026 Prompt Engineering competition — Department of Computer Science, COMSATS University Islamabad, Vehari Campus.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#categories">Prompt categories</a></li>
+            <li><a href="/#schedule">Event schedule</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Participants</h5>
+          <ul>
+            <li><a href="/register.html">Register</a></li>
+            <li><a href="/status.html">Track status</a></li>
+            <li><a href="/#rules">Rules &amp; judging</a></li>
+            <li><a href="/admin/login.html">Admin portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><svg class="icon"><use href="/assets/icons.svg#pin"></use></svg><span>CUI Vehari, Punjab, Pakistan</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#mail"></use></svg><span>hodes@cuivehari.edu.pk</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#phone"></use></svg><span>(067) 3602803</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#globe"></use></svg><span>www.comsats.edu.pk/cs-vhr</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> VSPARK · Department of Computer Science, COMSATS University Islamabad, Vehari Campus.</span>
+        <span>Prompt Engineering registration portal · <a href="/admin/login.html">Organisers</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/ui.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/status.js"></script>
+</body>
+</html>

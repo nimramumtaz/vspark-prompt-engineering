@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard — Prompt Engineering · VSPARK 2026</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=10" />
+  <link rel="stylesheet" href="/css/admin.css?v=10" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <a class="brand" href="/" aria-label="VSPARK">
+          <span class="brand-mark">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6" /><stop offset="1" stop-color="#7c3aed" /></linearGradient></defs>
+              <path d="M5 8h5.4l5.6 13.4L21.4 8H27l-8.6 17h-4.8z" fill="url(#vg)" />
+              <path d="M25 5.5l1.1 2.9 2.9 1.1-2.9 1.1L25 13.5l-1.1-2.9L21 9.5l2.9-1.1z" fill="#93b4ff" />
+            </svg>
+          </span>
+          <span class="brand-word">V<span>SPARK</span></span>
+        </a>
+        <span class="sidebar-tag">Prompt Engineering</span>
+      </div>
+
+      <nav class="side-nav" aria-label="Admin sections">
+        <button class="side-link is-active" type="button" data-view="overview">
+          <svg class="icon"><use href="/assets/icons.svg#dashboard"></use></svg>
+          <span>Overview</span>
+        </button>
+        <button class="side-link" type="button" data-view="registrations">
+          <svg class="icon"><use href="/assets/icons.svg#list"></use></svg>
+          <span>Registrations</span>
+          <span class="side-count" data-pending-count>0</span>
+        </button>
+        <button class="side-link" type="button" data-view="activity">
+          <svg class="icon"><use href="/assets/icons.svg#clock"></use></svg>
+          <span>Activity log</span>
+        </button>
+        <button class="side-link" type="button" data-view="settings">
+          <svg class="icon"><use href="/assets/icons.svg#settings"></use></svg>
+          <span>Settings</span>
+        </button>
+      </nav>
+
+      <div class="side-promo">
+        <span class="pill pill-dark"><span class="dot"></span>Live event</span>
+        <strong>Prompt Engineering</strong>
+        <span>VSPARK 2026 · December 10 · CUI Vehari</span>
+        <a class="btn btn-sm" href="/register.html" target="_blank" rel="noopener">Open public form</a>
+      </div>
+
+      <div class="sidebar-foot">
+        <div class="admin-chip">
+          <span class="avatar" data-admin-initials>A</span>
+          <div class="admin-chip-text">
+            <strong data-admin-name>Administrator</strong>
+            <span data-admin-email>admin@vspark.pk</span>
+          </div>
+        </div>
+        <button class="side-logout" type="button" id="logout-btn" title="Sign out">
+          <svg class="icon"><use href="/assets/icons.svg#logout"></use></svg>
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+    <!-- ================= MAIN ================= -->
+    <div class="admin-main">
+      <header class="admin-topbar">
+        <button class="topbar-menu" type="button" id="sidebar-toggle" aria-label="Toggle sidebar">
+          <svg class="icon"><use href="/assets/icons.svg#menu"></use></svg>
+        </button>
+        <div class="topbar-title">
+          <h1 id="view-title">Overview</h1>
+          <p id="view-sub">Live snapshot of Prompt Engineering registrations</p>
+        </div>
+        <div class="topbar-actions">
+          <a class="btn btn-sm btn-outline" href="/" target="_blank" rel="noopener">View site</a>
+          <button class="btn btn-sm" type="button" id="export-btn">
+            <svg class="icon"><use href="/assets/icons.svg#download"></use></svg>
+            Export CSV
+          </button>
+        </div>
+      </header>
+
+      <main class="admin-content">
+        <!-- ============ OVERVIEW ============ -->
+        <section class="panel" data-panel="overview">
+          <div class="kpi-grid">
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-icon"><svg class="icon"><use href="/assets/icons.svg#users"></use></svg></span>
+                <span class="kpi-trend" id="kpi-total-note">—</span>
+              </div>
+              <div class="kpi-value" id="kpi-total">0</div>
+              <div class="kpi-label">Total registrations</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-icon kpi-icon-warn"><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg></span>
+                <span class="kpi-trend" id="kpi-today">0 today</span>
+              </div>
+              <div class="kpi-value" id="kpi-pending">0</div>
+              <div class="kpi-label">Pending review</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-icon kpi-icon-success"><svg class="icon"><use href="/assets/icons.svg#check-circle"></use></svg></span>
+                <span class="kpi-trend" id="kpi-rate">0% approval</span>
+              </div>
+              <div class="kpi-value" id="kpi-approved">0</div>
+              <div class="kpi-label">Approved entries</div>
+            </article>
+            <article class="kpi">
+              <div class="kpi-top">
+                <span class="kpi-icon kpi-icon-brand"><svg class="icon"><use href="/assets/icons.svg#rupee"></use></svg></span>
+                <span class="kpi-trend" id="kpi-outstanding">PKR 0 outstanding</span>
+              </div>
+              <div class="kpi-value" id="kpi-collected">PKR 0</div>
+              <div class="kpi-label">Fees collected</div>
+            </article>
+          </div>
+
+          <div class="dash-grid">
+            <article class="card panel-card">
+              <div class="panel-card-head">
+                <div>
+                  <h3>Registrations by prompt category</h3>
+                  <p>Total entries per category</p>
+                </div>
+                <span class="badge">Live</span>
+              </div>
+              <div class="bar-chart" id="competition-chart"></div>
+            </article>
+
+            <article class="card panel-card">
+              <div class="panel-card-head">
+                <div>
+                  <h3>Status breakdown</h3>
+                  <p>Approval pipeline</p>
+                </div>
+              </div>
+              <div class="status-breakdown" id="status-breakdown"></div>
+              <div class="mini-stats" id="mini-stats"></div>
+            </article>
+          </div>
+
+          <article class="card table-card">
+            <div class="panel-card-head">
+              <div>
+                <h3>Latest registrations</h3>
+                <p>The six most recent student entries</p>
+              </div>
+              <button class="link-arrow" type="button" data-goto="registrations">
+                View all<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+              </button>
+            </div>
+            <div class="table-scroll">
+              <table class="admin-table">
+                <thead>
+                  <tr><th>Team</th><th>Category</th><th>University</th><th>Fee</th><th>Status</th><th>Received</th><th></th></tr>
+                </thead>
+                <tbody id="recent-body">
+                  <tr><td colspan="7" class="table-empty">Loading…</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <!-- ============ REGISTRATIONS ============ -->
+        <section class="panel" data-panel="registrations" hidden>
+          <article class="card table-card">
+            <div class="table-toolbar">
+              <div class="search-field">
+                <svg class="icon"><use href="/assets/icons.svg#search"></use></svg>
+                <input class="input" type="search" id="search-input" placeholder="Search team, leader, email, code, university…" />
+              </div>
+              <select class="select select-sm" id="filter-category" aria-label="Filter by prompt category">
+                <option value="">All prompt categories</option>
+              </select>
+              <select class="select select-sm" id="filter-status" aria-label="Filter by status">
+                <option value="">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+              </select>
+              <select class="select select-sm" id="filter-payment" aria-label="Filter by payment">
+                <option value="">All payments</option>
+                <option value="paid">Paid</option>
+                <option value="unpaid">Unpaid</option>
+              </select>
+              <select class="select select-sm" id="filter-sort" aria-label="Sort">
+                <option value="newest">Newest first</option>
+                <option value="oldest">Oldest first</option>
+                <option value="name">Team name A–Z</option>
+                <option value="category">Category A–Z</option>
+              </select>
+              <button class="btn btn-sm btn-outline" type="button" id="reset-filters">Reset</button>
+            </div>
+
+            <div class="table-scroll">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Team / code</th>
+                    <th>Prompt category</th>
+                    <th>Leader</th>
+                    <th>University</th>
+                    <th>Fee</th>
+                    <th>Payment</th>
+                    <th>Status</th>
+                    <th>Received</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="reg-body">
+                  <tr><td colspan="9" class="table-empty">Loading registrations…</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-foot">
+              <span id="reg-count" class="muted">—</span>
+              <div class="pager" id="pager"></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ============ ACTIVITY ============ -->
+        <section class="panel" data-panel="activity" hidden>
+          <article class="card panel-card">
+            <div class="panel-card-head">
+              <div>
+                <h3>Activity log</h3>
+                <p>Every registration, decision and edit recorded by the portal</p>
+              </div>
+            </div>
+            <ul class="activity-list" id="activity-list">
+              <li class="table-empty">Loading…</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- ============ SETTINGS ============ -->
+        <section class="panel" data-panel="settings" hidden>
+          <div class="settings-grid">
+            <article class="card panel-card">
+              <div class="panel-card-head">
+                <div>
+                  <h3>Change password</h3>
+                  <p>Use at least 8 characters</p>
+                </div>
+              </div>
+              <form id="password-form" novalidate>
+                <div class="field">
+                  <label for="current-password">Current password</label>
+                  <input class="input" id="current-password" type="password" autocomplete="current-password" required />
+                </div>
+                <div class="field" style="margin-top:14px">
+                  <label for="new-password">New password</label>
+                  <input class="input" id="new-password" type="password" autocomplete="new-password" required />
+                </div>
+                <div class="field" style="margin-top:14px">
+                  <label for="confirm-password">Confirm new password</label>
+                  <input class="input" id="confirm-password" type="password" autocomplete="new-password" required />
+                </div>
+                <div id="password-alert" class="alert alert-info hidden" style="margin-top:16px">
+                  <svg class="icon"><use href="/assets/icons.svg#shield"></use></svg><span id="password-alert-text"></span>
+                </div>
+                <button class="btn" type="submit" style="margin-top:20px">Update password</button>
+              </form>
+            </article>
+
+            <article class="card panel-card">
+              <div class="panel-card-head">
+                <div>
+                  <h3>Account &amp; event</h3>
+                  <p>Organiser details</p>
+                </div>
+              </div>
+              <ul class="info-list">
+                <li><span>Signed in as</span><strong data-admin-name>Administrator</strong></li>
+                <li><span>Email</span><strong data-admin-email>admin@vspark.pk</strong></li>
+                <li><span>Role</span><strong>Organiser (full access)</strong></li>
+                <li><span>Competition</span><strong>Prompt Engineering</strong></li>
+                <li><span>Event</span><strong>VSPARK 2026</strong></li>
+                <li><span>Date</span><strong>December 10, 2026</strong></li>
+                <li><span>Venue</span><strong>CUI Vehari Campus</strong></li>
+                <li><span>Data store</span><strong>data/db.json</strong></li>
+              </ul>
+              <div class="alert alert-info" style="margin-top:18px;font-size:.8rem">
+                <svg class="icon"><use href="/assets/icons.svg#shield"></use></svg>
+                <span>Registrations are stored on the server in <code>data/db.json</code>. Export a CSV before the event as a backup.</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- ================= DETAIL DRAWER ================= -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Registration details">
+    <div class="drawer-head">
+      <div>
+        <span class="eyebrow" style="margin-bottom:4px">Registration</span>
+        <h2 id="d-team">—</h2>
+        <p id="d-meta" class="muted">—</p>
+      </div>
+      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close details">
+        <svg class="icon"><use href="/assets/icons.svg#x"></use></svg>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="drawer-body"></div>
+
+    <div class="drawer-foot">
+      <div class="drawer-actions">
+        <button class="btn btn-sm" type="button" data-decision="approved">
+          <svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Approve
+        </button>
+        <button class="btn btn-sm btn-outline" type="button" data-decision="pending">Mark pending</button>
+        <button class="btn btn-sm btn-danger-soft" type="button" data-decision="rejected">Reject</button>
+        <button class="btn btn-sm btn-outline" type="button" id="toggle-payment">Toggle payment</button>
+      </div>
+      <div class="field" style="margin-top:16px">
+        <label for="admin-notes">Note for this team <span class="muted" style="font-weight:500">(visible on their status page)</span></label>
+        <textarea class="textarea" id="admin-notes" rows="2" maxlength="500" placeholder="e.g. Bring your student ID for verification."></textarea>
+      </div>
+      <div class="drawer-foot-row">
+        <button class="btn btn-sm" type="button" id="save-notes">Save note</button>
+        <button class="btn btn-sm btn-danger" type="button" id="delete-reg">
+          <svg class="icon"><use href="/assets/icons.svg#trash"></use></svg>Delete
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="/js/ui.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

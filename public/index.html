@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prompt Engineering — VSPARK 2026 Registration Portal</title>
+  <meta name="description" content="Official registration portal for the VSPARK 2026 Prompt Engineering competition at COMSATS University Islamabad, Vehari Campus. Four prompt categories: video generation, website generation, image generation and image editing. PKR 1,000 entry, solo or team of two." />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=10" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Prompt Engineering — VSPARK 2026 home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="vg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3b82f6" />
+                <stop offset="1" stop-color="#7c3aed" />
+              </linearGradient>
+            </defs>
+            <path d="M5 8h5.4l5.6 13.4L21.4 8H27l-8.6 17h-4.8z" fill="url(#vg)" />
+            <path d="M25 5.5l1.1 2.9 2.9 1.1-2.9 1.1L25 13.5l-1.1-2.9L21 9.5l2.9-1.1z" fill="#93b4ff" />
+          </svg>
+        </span>
+        <span class="brand-word">V<span>SPARK</span></span>
+        <span class="brand-sub">Prompt Engineering</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/" class="active">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#rules">Rules</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#faq">FAQ</a>
+        <a href="/status.html">Track Status</a>
+        <a href="/register.html" class="nav-mobile-cta">Register Now</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-login" href="/admin/login.html">Admin Log in</a>
+        <a class="btn btn-sm" href="/register.html">Register Now
+          <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          <svg class="icon"><use href="/assets/icons.svg#menu"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-bg" role="img" aria-label="COMSATS University Islamabad, Vehari Campus building"></div>
+      <div class="container hero-inner">
+        <span class="hero-badge"><span class="dot"></span> VSPARK 2026 · Prompt Engineering</span>
+        <h1 class="hero-title hero-title-pe"><span class="v">PROMPT</span><br />ENGINEERING</h1>
+        <div class="hero-meta">
+          <span>December 10, 2026</span>
+          <span class="sep"></span>
+          <span>COMSATS University Islamabad</span>
+        </div>
+        <p class="hero-lede">
+          Four ways to prove your prompting. Generate a <strong>video</strong>, build a <strong>website</strong>, create
+          <strong>original images</strong> or <strong>edit supplied photographs</strong> — then submit your output and the
+          prompts that produced it.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-lg" href="/register.html">Register Now
+            <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+          </a>
+          <a class="btn btn-lg btn-ghost" href="#categories">Explore Categories</a>
+        </div>
+        <p class="hero-note">PKR 1,000 entry · Solo or team of 2 · Registration closes December 5</p>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <div class="stat-strip">
+      <div class="container">
+        <div class="stat-grid">
+          <div class="stat">
+            <span class="stat-icon"><svg class="icon"><use href="/assets/icons.svg#rupee"></use></svg></span>
+            <div>
+              <div class="stat-value">PKR 1,000</div>
+              <div class="stat-label">Registration fee</div>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon"><svg class="icon"><use href="/assets/icons.svg#sparkles"></use></svg></span>
+            <div>
+              <div class="stat-value" data-counter="categories" data-fallback="4">4</div>
+              <div class="stat-label">Prompt categories</div>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon"><svg class="icon"><use href="/assets/icons.svg#users"></use></svg></span>
+            <div>
+              <div class="stat-value" data-counter="participants" data-fallback="0">0</div>
+              <div class="stat-label">Registered participants</div>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon"><svg class="icon"><use href="/assets/icons.svg#globe"></use></svg></span>
+            <div>
+              <div class="stat-value" data-counter="universities" data-fallback="0">0</div>
+              <div class="stat-label">Universities on board</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section">
+      <div class="container split">
+        <div data-reveal>
+          <span class="eyebrow">The competition</span>
+          <h2 class="section-title">One competition. Four ways to <span class="grad-text">prompt</span>.</h2>
+          <p class="section-sub">
+            Prompt Engineering is VSPARK's AI challenge, hosted by the Department of Computer Science at COMSATS
+            University Islamabad, Vehari Campus. Register once, pick the category you want to compete in, and show up on
+            December 10 ready to build with words.
+          </p>
+          <ul class="feature-list">
+            <li><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg> A single timed challenge window — generation, refinement and submission included</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#video"></use></svg> Choose from video generation, website generation, image generation or image editing</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#shield"></use></svg> Free, Pro and Premium AI tools are allowed — bring your own accounts and credits</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#check-circle"></use></svg> Prompts are judged alongside the output, so keep a clean prompt log</li>
+          </ul>
+          <div class="hero-cta" style="justify-content:flex-start;margin-top:32px">
+            <a class="btn" href="/register.html">Secure your spot
+              <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+            </a>
+            <a class="link-arrow" href="#rules">Read the rules
+              <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+        <div class="split-media" data-reveal data-reveal-delay="120">
+          <img src="/assets/university.png" alt="COMSATS University Islamabad, Vehari Campus" loading="lazy" />
+          <div class="floating-card">
+            <div class="fc-label">Registration closes</div>
+            <div class="fc-value">Dec 05</div>
+            <div class="fc-row"><svg class="icon" style="width:15px;height:15px"><use href="/assets/icons.svg#lightning"></use></svg>
+              <span data-countdown="2026-12-10T09:00:00+05:00">—</span>
+            </div>
+          </div>
+          <div class="media-badge">
+            <svg class="icon"><use href="/assets/icons.svg#pin"></use></svg>
+            COMSATS University Islamabad, Vehari Campus
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CATEGORIES ============ -->
+    <section class="section section-soft" id="categories">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Prompt categories</span>
+          <h2 class="section-title">Pick the brief you want to <span class="grad-text">attack</span></h2>
+          <p class="section-sub">
+            Every category has its own brief, tools and judging focus — but the same registration fee and the same
+            national stage. You enter one category per entry.
+          </p>
+        </div>
+
+        <div class="cat-grid">
+          <article class="cat-card" data-reveal>
+            <div class="cat-head">
+              <span class="card-icon cat-icon"><svg class="icon"><use href="/assets/icons.svg#video"></use></svg></span>
+              <span class="cat-tag">Flagship</span>
+            </div>
+            <h3>Video Generation</h3>
+            <p class="cat-short">Prompt a complete AI video from a written scenario.</p>
+            <p class="cat-desc">
+              Receive a scenario and reference images, then generate an original AI video that follows the story, keeps
+              continuity between shots and lands every required visual element.
+            </p>
+            <ul class="cat-focus">
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Multi-shot continuity and camera movement</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Structured prompts for motion and style</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Editing, audio and subtitles allowed</li>
+            </ul>
+            <div class="cat-foot">
+              <div class="cat-meta">
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg>120 minutes</span>
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#star"></use></svg>Playable MP4</span>
+              </div>
+              <a class="link-arrow" href="/register.html?category=video-generation">Register
+                <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="cat-card" data-reveal data-reveal-delay="80">
+            <div class="cat-head">
+              <span class="card-icon cat-icon"><svg class="icon"><use href="/assets/icons.svg#browser"></use></svg></span>
+              <span class="cat-tag">Build</span>
+            </div>
+            <h3>Website Generation</h3>
+            <p class="cat-short">Build a working, responsive website using prompts alone.</p>
+            <p class="cat-desc">
+              Turn a product brief into a functional, responsive website. Prompt an AI builder or code assistant, iterate
+              on layout and copy, then ship a live preview with the prompts that got you there.
+            </p>
+            <ul class="cat-focus">
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Prompt-driven UI, copy and layout</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Responsive behaviour and accessibility</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Iteration log that shows the build evolve</li>
+            </ul>
+            <div class="cat-foot">
+              <div class="cat-meta">
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg>120 minutes</span>
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#star"></use></svg>Live preview</span>
+              </div>
+              <a class="link-arrow" href="/register.html?category=website-generation">Register
+                <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="cat-card" data-reveal>
+            <div class="cat-head">
+              <span class="card-icon cat-icon"><svg class="icon"><use href="/assets/icons.svg#image"></use></svg></span>
+              <span class="cat-tag">Visual</span>
+            </div>
+            <h3>Image Generation</h3>
+            <p class="cat-short">Create original key art from a detailed prompt brief.</p>
+            <p class="cat-desc">
+              Generate a set of original images that answer a creative brief — a poster series, key art or concept sheet.
+              Composition, lighting and consistency all count, and every prompt is submitted.
+            </p>
+            <ul class="cat-focus">
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Composition, lighting and colour control</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Consistent style across a set of images</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Prompt refinement over multiple passes</li>
+            </ul>
+            <div class="cat-foot">
+              <div class="cat-meta">
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg>90 minutes</span>
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#star"></use></svg>Image set</span>
+              </div>
+              <a class="link-arrow" href="/register.html?category=image-generation">Register
+                <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="cat-card" data-reveal data-reveal-delay="80">
+            <div class="cat-head">
+              <span class="card-icon cat-icon"><svg class="icon"><use href="/assets/icons.svg#wand"></use></svg></span>
+              <span class="cat-tag">Precision</span>
+            </div>
+            <h3>Image Editing</h3>
+            <p class="cat-short">Transform supplied photographs with precise edit prompts.</p>
+            <p class="cat-desc">
+              Start from supplied photographs and use prompt-based editing tools to relight, restyle, clean up and
+              recompose them — without breaking the original subject or scene.
+            </p>
+            <ul class="cat-focus">
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Local edits, masking and clean results</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Relighting and background replacement</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Preserving subject identity and detail</li>
+            </ul>
+            <div class="cat-foot">
+              <div class="cat-meta">
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg>90 minutes</span>
+                <span class="fact"><svg class="icon"><use href="/assets/icons.svg#star"></use></svg>Before / after</span>
+              </div>
+              <a class="link-arrow" href="/register.html?category=image-editing">Register
+                <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT RUNS ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Challenge format</span>
+          <h2 class="section-title">Brief in. Prompts out. <span class="grad-text">Judged.</span></h2>
+          <p class="section-sub">Three moves, one clock. Everything you submit is created during the competition — nothing pre-made.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card step-card" data-reveal>
+            <span class="step-index">01</span>
+            <div class="card-icon"><svg class="icon"><use href="/assets/icons.svg#lightning"></use></svg></div>
+            <h3>Receive the brief</h3>
+            <p>At the starting whistle you get the scenario, reference material and the exact deliverable list for your category.</p>
+          </article>
+          <article class="card step-card" data-reveal data-reveal-delay="80">
+            <span class="step-index">02</span>
+            <div class="card-icon"><svg class="icon"><use href="/assets/icons.svg#sparkles"></use></svg></div>
+            <h3>Engineer and iterate</h3>
+            <p>Write structured prompts, generate, inspect and refine. Keep every prompt — the log is part of your score.</p>
+          </article>
+          <article class="card step-card" data-reveal data-reveal-delay="160">
+            <span class="step-index">03</span>
+            <div class="card-icon"><svg class="icon"><use href="/assets/icons.svg#trophy"></use></svg></div>
+            <h3>Submit and defend</h3>
+            <p>Upload the final output and your prompt log before time is called, then walk the judges through your process.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RULES & JUDGING ============ -->
+    <section class="section section-tint" id="rules">
+      <div class="container split">
+        <div data-reveal>
+          <span class="eyebrow">Rules &amp; judging</span>
+          <h2 class="section-title">Fair play, then <span class="grad-text">fine craft</span></h2>
+          <p class="section-sub">
+            Prompt Engineering rewards control, not luck. Judges review the final output and the prompts behind it, and
+            their evaluation is final.
+          </p>
+          <ul class="feature-list">
+            <li><svg class="icon"><use href="/assets/icons.svg#users"></use></svg> Individual entry or a team of maximum two members</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#clock"></use></svg> Exactly the category time limit, including generation, editing and submission</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#browser"></use></svg> Students bring and use their own laptops</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#sparkles"></use></svg> Free, Pro and Premium AI platforms allowed — participants arrange their own accounts</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#edit"></use></svg> Use clear, structured prompts and refine them for consistency and quality</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#shield"></use></svg> No copied work, no fabricated generation evidence, no harmful or unauthorised content</li>
+          </ul>
+          <div class="alert alert-info" style="margin-top:26px;font-size:.84rem">
+            <svg class="icon"><use href="/assets/icons.svg#shield"></use></svg>
+            <span>Judges may inspect your prompts and verify how the output was produced. Previously completed work cannot be submitted.</span>
+          </div>
+        </div>
+
+        <div class="judge-card" data-reveal data-reveal-delay="120">
+          <div class="judge-head">
+            <div>
+              <h3>Scorecard</h3>
+              <p>How every category is marked, out of 100</p>
+            </div>
+            <span class="badge">2026</span>
+          </div>
+          <div class="judge-rows">
+            <div class="judge-row">
+              <div class="judge-top"><span>Prompt craft</span><strong>30</strong></div>
+              <div class="judge-track"><div class="judge-fill" style="width:30%"></div></div>
+              <p>Structure, specificity, iteration and control of the model.</p>
+            </div>
+            <div class="judge-row">
+              <div class="judge-top"><span>Scenario accuracy</span><strong>30</strong></div>
+              <div class="judge-track"><div class="judge-fill" style="width:30%"></div></div>
+              <p>How faithfully the brief and required elements are followed.</p>
+            </div>
+            <div class="judge-row">
+              <div class="judge-top"><span>Visual quality</span><strong>25</strong></div>
+              <div class="judge-track"><div class="judge-fill" style="width:25%"></div></div>
+              <p>Polish, consistency, continuity and finish of the output.</p>
+            </div>
+            <div class="judge-row">
+              <div class="judge-top"><span>Creativity</span><strong>15</strong></div>
+              <div class="judge-track"><div class="judge-fill" style="width:15%"></div></div>
+              <p>Original ideas that still respect the brief.</p>
+            </div>
+          </div>
+          <div class="judge-foot">
+            <svg class="icon"><use href="/assets/icons.svg#trophy"></use></svg>
+            <span>Top teams take home cash prizes, shields and certificates — every participant receives a certificate.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCHEDULE ============ -->
+    <section class="section" id="schedule">
+      <div class="container split split-schedule">
+        <div data-reveal>
+          <span class="eyebrow">Event day</span>
+          <h2 class="section-title">How December 10 <span class="grad-text">unfolds</span></h2>
+          <p class="section-sub">
+            Doors open at 8:30 AM at the Vehari Campus. Report to the registration desk with your team code and student
+            ID, then head to the prompt lab for the briefing.
+          </p>
+          <div class="card" style="margin-top:28px;background:linear-gradient(150deg,#0a1229,#132a5c);border:0;color:#fff">
+            <div class="card-icon" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.18);color:#9dc0ff">
+              <svg class="icon"><use href="/assets/icons.svg#users"></use></svg>
+            </div>
+            <h3 style="color:#fff">Bring your own setup</h3>
+            <p style="color:rgba(255,255,255,.7);margin-bottom:16px">
+              Laptop, charger, student ID and the AI tool accounts you plan to use. The campus provides Wi-Fi, power and
+              workspace — not subscriptions or credits.
+            </p>
+            <a class="btn btn-sm" href="/register.html">Register your team
+              <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="timeline" data-reveal data-reveal-delay="120">
+          <div class="tl-item active">
+            <span class="tl-dot">01</span>
+            <div class="tl-body">
+              <div><h4>Check-in &amp; kit collection</h4><p>Main gate · verify team code, collect badges</p></div>
+              <span class="tl-time">8:30 AM</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot">02</span>
+            <div class="tl-body">
+              <div><h4>Opening &amp; brief release</h4><p>Prompt lab · rules, tools and category briefs</p></div>
+              <span class="tl-time">9:00 AM</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot">03</span>
+            <div class="tl-body">
+              <div><h4>Challenge window</h4><p>Video, website, image generation and image editing</p></div>
+              <span class="tl-time">9:30 AM</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot">04</span>
+            <div class="tl-body">
+              <div><h4>Submissions close</h4><p>Upload final output + prompt log</p></div>
+              <span class="tl-time">11:30 AM</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot">05</span>
+            <div class="tl-body">
+              <div><h4>Judging &amp; prompt review</h4><p>Live evaluation and short Q&amp;A per team</p></div>
+              <span class="tl-time">12:00 PM</span>
+            </div>
+          </div>
+          <div class="tl-item">
+            <span class="tl-dot">06</span>
+            <div class="tl-body">
+              <div><h4>Awards ceremony</h4><p>Prizes, shields and closing remarks</p></div>
+              <span class="tl-time">2:00 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROMPT PATTERNS ============ -->
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">Prepare smarter</span>
+          <h2 class="section-title">Starter prompt <span class="grad-text">patterns</span></h2>
+          <p class="section-sub">A few structures that work across categories. Adapt them to the brief — do not memorise them for it.</p>
+        </div>
+        <div class="grid-3">
+          <article class="prompt-card" data-reveal>
+            <span class="prompt-label">Role &amp; scene</span>
+            <p class="prompt-text">“Act as a cinematic art director. Shoot a 6-second night scene in a rain-soaked Lahore street, 35mm lens, neon reflections, slow dolly-in.”</p>
+            <span class="prompt-tag">Video · Image</span>
+          </article>
+          <article class="prompt-card" data-reveal data-reveal-delay="80">
+            <span class="prompt-label">Structure &amp; constraints</span>
+            <p class="prompt-text">“Build a single-page site for a campus fest: hero, 4 event cards, schedule table, registration CTA. Mobile-first, accessible contrast, no external libraries.”</p>
+            <span class="prompt-tag">Website</span>
+          </article>
+          <article class="prompt-card" data-reveal data-reveal-delay="160">
+            <span class="prompt-label">Edit pass</span>
+            <p class="prompt-text">“Keep the subject unchanged. Replace only the background with a soft studio gradient, relight from camera-left, preserve hair detail and skin texture.”</p>
+            <span class="prompt-tag">Image editing</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head center" data-reveal>
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Questions, <span class="grad-text">answered</span></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>Who can register for Prompt Engineering?<svg class="icon"><use href="/assets/icons.svg#chevron-down"></use></svg></summary>
+            <div class="faq-body">
+              Any student currently enrolled in a college or university in Pakistan. You can enter individually or as a
+              team of up to two members. One registration covers one category entry.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I have to choose a category now?<svg class="icon"><use href="/assets/icons.svg#chevron-down"></use></svg></summary>
+            <div class="faq-body">
+              Yes — pick video generation, website generation, image generation or image editing in the registration form.
+              The category determines your brief, your time limit and the judging panel. Contact the organisers if you
+              need to change it before registration closes.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Which AI tools are allowed?<svg class="icon"><use href="/assets/icons.svg#chevron-down"></use></svg></summary>
+            <div class="faq-body">
+              Free, Pro and Premium tools are all allowed — for example Runway, Kling, Pika, Sora, CapCut and Flow for
+              video; Midjourney, Firefly or similar for images; and AI builders or code assistants for websites. AI
+              assistants such as ChatGPT, Gemini and Claude can help you write prompts. You arrange your own accounts and
+              credits.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What exactly do I submit?<svg class="icon"><use href="/assets/icons.svg#chevron-down"></use></svg></summary>
+            <div class="faq-body">
+              Your final output in the format stated in the brief — a playable MP4, a live website preview, or an image
+              set with before/after files — plus the prompt log that produced it. Everything must be created during the
+              competition window.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>How is the PKR 1,000 fee paid?<svg class="icon"><use href="/assets/icons.svg#chevron-down"></use></svg></summary>
+            <div class="faq-body">
+              Submit the form to reserve your entry, then pay at the registration desk on event day. The fee covers the
+              whole team, not each member. The organisers verify every entry from the admin portal before confirming your
+              seat.
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I know my registration reached the organisers?<svg class="icon"><use href="/assets/icons.svg#chevron-down"></use></svg></summary>
+            <div class="faq-body">
+              Every submission receives a unique team code (for example <strong>PE-26-0007</strong>). Use the
+              <a href="/status.html">Track Status</a> page with your code and leader email to see live approval and payment
+              status, and any note from the organisers.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <h2>Ready to Ignite Your Potential?</h2>
+          <p>Register now and secure your spot in VSPARK 2026 Prompt Engineering. Seats per category are limited and confirmed on a first-come basis.</p>
+          <div class="hero-cta">
+            <a class="btn btn-lg" href="/register.html">Register Now
+              <svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+            </a>
+            <a class="btn btn-lg btn-ghost" href="/status.html">Track my registration</a>
+          </div>
+          <span class="cta-note">Registration closes December 5, 2026 · PKR 1,000 per team entry</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/cui-emblem.svg" alt="COMSATS University Islamabad, Vehari Campus" />
+            <span class="brand-word">V<span>SPARK</span></span>
+          </div>
+          <p class="footer-about">
+            The official registration portal for the VSPARK 2026 Prompt Engineering competition — Department of Computer
+            Science, COMSATS University Islamabad, Vehari Campus.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#categories">Prompt categories</a></li>
+            <li><a href="#schedule">Event schedule</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Participants</h5>
+          <ul>
+            <li><a href="/register.html">Register</a></li>
+            <li><a href="/status.html">Track status</a></li>
+            <li><a href="#rules">Rules &amp; judging</a></li>
+            <li><a href="/admin/login.html">Admin portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><svg class="icon"><use href="/assets/icons.svg#pin"></use></svg><span>CUI Vehari, Punjab, Pakistan</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#mail"></use></svg><span>hodes@cuivehari.edu.pk</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#phone"></use></svg><span>(067) 3602803</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#globe"></use></svg><span>www.comsats.edu.pk/cs-vhr</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> VSPARK · Department of Computer Science, COMSATS University Islamabad, Vehari Campus.</span>
+        <span>Prompt Engineering registration portal · <a href="/admin/login.html">Organisers</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/ui.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

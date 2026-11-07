@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Sign In — Prompt Engineering · VSPARK 2026</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=10" />
+  <link rel="stylesheet" href="/css/admin.css?v=10" />
+</head>
+<body class="auth-body">
+  <div class="auth-split">
+    <aside class="auth-brand">
+      <div class="auth-brand-inner">
+        <a class="brand" href="/" style="color:#fff">
+          <span class="brand-mark" style="background:rgba(255,255,255,.12);box-shadow:none">
+            <svg viewBox="0 0 32 32" aria-hidden="true">
+              <defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#93c5fd" /><stop offset="1" stop-color="#c4b5fd" /></linearGradient></defs>
+              <path d="M5 8h5.4l5.6 13.4L21.4 8H27l-8.6 17h-4.8z" fill="url(#vg)" />
+              <path d="M25 5.5l1.1 2.9 2.9 1.1-2.9 1.1L25 13.5l-1.1-2.9L21 9.5l2.9-1.1z" fill="#dbeafe" />
+            </svg>
+          </span>
+          <span class="brand-word" style="color:#fff">V<span style="background:linear-gradient(100deg,#93c5fd,#c4b5fd);-webkit-background-clip:text;background-clip:text;color:transparent">SPARK</span></span>
+        </a>
+
+        <div class="auth-pitch">
+          <span class="pill pill-dark"><span class="dot"></span>Organiser access</span>
+          <h1>Every Prompt Engineering entry,<br />one control room.</h1>
+          <p>
+            Review student registrations, filter by prompt category, approve teams, track payments and export the final
+            roster — all from the VSPARK admin portal.
+          </p>
+          <ul class="auth-points">
+            <li><svg class="icon"><use href="/assets/icons.svg#check-circle"></use></svg>Live dashboard of teams, fees and approvals</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#check-circle"></use></svg>Filter video, website, image generation and image editing entries</li>
+            <li><svg class="icon"><use href="/assets/icons.svg#check-circle"></use></svg>Notes and messages visible to each team</li>
+          </ul>
+        </div>
+
+        <div class="auth-foot">
+          <span>VSPARK 2026 · COMSATS University Islamabad, Vehari Campus</span>
+        </div>
+      </div>
+      <div class="auth-brand-glow"></div>
+    </aside>
+
+    <main class="auth-panel">
+      <div class="auth-card">
+        <a class="link-arrow" href="/" style="font-size:.84rem;margin-bottom:28px">
+          <svg class="icon" style="transform:rotate(180deg)"><use href="/assets/icons.svg#arrow-right"></use></svg>
+          Back to public site
+        </a>
+
+        <span class="eyebrow">Admin portal</span>
+        <h2>Sign in to Prompt Engineering</h2>
+        <p class="muted" style="font-size:.92rem;margin-bottom:26px">
+          Use the organiser account provided by the CS Department.
+        </p>
+
+        <div id="login-alert" class="alert alert-error hidden" role="alert">
+          <svg class="icon"><use href="/assets/icons.svg#x"></use></svg><span id="login-alert-text"></span>
+        </div>
+
+        <form id="login-form" novalidate style="margin-top:18px">
+          <div class="field">
+            <label for="email">Email address</label>
+            <input class="input" id="email" name="email" type="email" placeholder="admin@vspark.pk" autocomplete="username" required />
+          </div>
+          <div class="field" style="margin-top:16px">
+            <label for="password">Password</label>
+            <div class="password-wrap">
+              <input class="input" id="password" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+              <button type="button" class="password-toggle" id="toggle-password" aria-label="Show password">
+                <svg class="icon"><use href="/assets/icons.svg#shield"></use></svg>
+              </button>
+            </div>
+          </div>
+
+          <button class="btn btn-block btn-lg" type="submit" id="login-btn" style="margin-top:24px">
+            Sign in to dashboard<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+          </button>
+        </form>
+
+        <div class="alert alert-info" style="margin-top:24px;font-size:.8rem">
+          <svg class="icon"><use href="/assets/icons.svg#shield"></use></svg>
+          <span>
+            Demo credentials on a fresh install — <strong>admin@vspark.pk</strong> / <strong>Vspark@2026</strong>.
+            Change the password from Settings after your first sign-in.
+          </span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="/js/ui.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

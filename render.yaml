@@ -1,0 +1,26 @@
+# Render Blueprint — VSPARK 2026 Prompt Engineering portal
+#
+# New ▸ Blueprint ▸ select the GitHub repo ▸ Apply.
+# Paste the Neon connection string when Render asks for DATABASE_URL.
+# Without DATABASE_URL the app still boots, but uses ephemeral JSON storage
+# and registrations are lost whenever the free instance restarts.
+services:
+  - type: web
+    name: vspark-prompt-engineering
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        value: admin@vspark.pk
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DATABASE_URL
+        sync: false

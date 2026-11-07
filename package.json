@@ -1,0 +1,28 @@
+{
+  "name": "vspark-registration-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VSPARK 2026 Prompt Engineering registration portal — student registration, status tracking and admin dashboard.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "seed": "node scripts/seed-demo.mjs",
+    "reset": "node scripts/seed-demo.mjs --fresh",
+    "assets": "node scripts/bump-assets.mjs",
+    "test": "node scripts/test-pg-store.mjs && node scripts/smoke-test.mjs",
+    "test:store": "node scripts/test-pg-store.mjs",
+    "test:e2e": "node scripts/smoke-test.mjs"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "pg-mem": "^3.0.14"
+  }
+}

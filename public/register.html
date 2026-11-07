@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register — Prompt Engineering · VSPARK 2026</title>
+  <meta name="description" content="Register for the VSPARK 2026 Prompt Engineering competition. Choose video generation, website generation, image generation or image editing, add your team details and get your team code instantly. PKR 1,000 entry." />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css?v=10" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Prompt Engineering — VSPARK 2026 home">
+        <span class="brand-mark">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b82f6" /><stop offset="1" stop-color="#7c3aed" /></linearGradient></defs>
+            <path d="M5 8h5.4l5.6 13.4L21.4 8H27l-8.6 17h-4.8z" fill="url(#vg)" />
+            <path d="M25 5.5l1.1 2.9 2.9 1.1-2.9 1.1L25 13.5l-1.1-2.9L21 9.5l2.9-1.1z" fill="#93b4ff" />
+          </svg>
+        </span>
+        <span class="brand-word">V<span>SPARK</span></span>
+        <span class="brand-sub">Prompt Engineering</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#categories">Categories</a>
+        <a href="/#rules">Rules</a>
+        <a href="/#schedule">Schedule</a>
+        <a href="/status.html">Track Status</a>
+        <a href="/register.html" class="nav-mobile-cta">Register Now</a>
+      </nav>
+      <div class="nav-actions">
+        <a class="nav-login" href="/admin/login.html">Admin Log in</a>
+        <a class="btn btn-sm" href="#register-form">Register Now<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg></a>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-expanded="false"><svg class="icon"><use href="/assets/icons.svg#menu"></use></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Register</span></nav>
+        <span class="eyebrow">Prompt Engineering · VSPARK 2026</span>
+        <h1>Register for <span class="grad-text">Prompt Engineering</span></h1>
+        <p>Pick your prompt category, add your team details and get a team code instantly. The organisers review every entry in the admin portal before confirming your seat.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div id="form-alert" class="alert alert-error hidden" role="alert" style="margin-bottom:24px">
+          <svg class="icon"><use href="/assets/icons.svg#x"></use></svg><span id="form-alert-text"></span>
+        </div>
+
+        <div class="form-shell" id="register-shell">
+          <form class="form-card" id="register-form" novalidate autocomplete="on">
+            <!-- Step 1 -->
+            <div class="form-step">
+              <span class="step-num">01</span>
+              <div>
+                <h2>Prompt category</h2>
+                <p>One entry, one category. Choose the brief you want to compete in.</p>
+              </div>
+            </div>
+
+            <div class="cat-select" role="radiogroup" aria-label="Prompt category">
+              <label class="cat-option">
+                <input type="radio" name="category" value="video-generation" />
+                <span class="cat-option-icon"><svg class="icon"><use href="/assets/icons.svg#video"></use></svg></span>
+                <span class="cat-option-text">
+                  <strong>Video Generation</strong>
+                  <span>Scenario → AI video</span>
+                  <em>120 minutes</em>
+                </span>
+                <span class="cat-option-check"><svg class="icon"><use href="/assets/icons.svg#check"></use></svg></span>
+              </label>
+              <label class="cat-option">
+                <input type="radio" name="category" value="website-generation" />
+                <span class="cat-option-icon"><svg class="icon"><use href="/assets/icons.svg#browser"></use></svg></span>
+                <span class="cat-option-text">
+                  <strong>Website Generation</strong>
+                  <span>Brief → live website</span>
+                  <em>120 minutes</em>
+                </span>
+                <span class="cat-option-check"><svg class="icon"><use href="/assets/icons.svg#check"></use></svg></span>
+              </label>
+              <label class="cat-option">
+                <input type="radio" name="category" value="image-generation" />
+                <span class="cat-option-icon"><svg class="icon"><use href="/assets/icons.svg#image"></use></svg></span>
+                <span class="cat-option-text">
+                  <strong>Image Generation</strong>
+                  <span>Brief → original image set</span>
+                  <em>90 minutes</em>
+                </span>
+                <span class="cat-option-check"><svg class="icon"><use href="/assets/icons.svg#check"></use></svg></span>
+              </label>
+              <label class="cat-option">
+                <input type="radio" name="category" value="image-editing" />
+                <span class="cat-option-icon"><svg class="icon"><use href="/assets/icons.svg#wand"></use></svg></span>
+                <span class="cat-option-text">
+                  <strong>Image Editing</strong>
+                  <span>Photos → prompt-based edits</span>
+                  <em>90 minutes</em>
+                </span>
+                <span class="cat-option-check"><svg class="icon"><use href="/assets/icons.svg#check"></use></svg></span>
+              </label>
+            </div>
+            <span class="field-error" data-error="category"></span>
+
+            <hr class="form-divider" />
+
+            <!-- Step 2 -->
+            <div class="form-step">
+              <span class="step-num">02</span>
+              <div>
+                <h2>Team details</h2>
+                <p>Enter solo or bring one teammate. The fee covers the whole team.</p>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="team_name">Team name <span class="req">*</span></label>
+                <input class="input" id="team_name" name="team_name" maxlength="60" placeholder="e.g. Prompt Pirates" required />
+                <span class="field-error" data-error="team_name"></span>
+              </div>
+
+              <div class="field">
+                <label for="experience">Prompting experience</label>
+                <select class="select" id="experience" name="experience">
+                  <option value="beginner">Beginner — new to AI tools</option>
+                  <option value="intermediate" selected>Intermediate — I use them regularly</option>
+                  <option value="advanced">Advanced — I build with them daily</option>
+                </select>
+              </div>
+            </div>
+
+            <hr class="form-divider" />
+
+            <!-- Step 3 -->
+            <div class="form-step">
+              <span class="step-num">03</span>
+              <div>
+                <h2>Team leader</h2>
+                <p>The person we contact about approval, payment and schedule changes.</p>
+              </div>
+            </div>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="leader_name">Full name <span class="req">*</span></label>
+                <input class="input" id="leader_name" name="leader_name" maxlength="80" placeholder="e.g. Ayesha Khan" required />
+                <span class="field-error" data-error="leader_name"></span>
+              </div>
+
+              <div class="field">
+                <label for="leader_email">Email address <span class="req">*</span></label>
+                <input class="input" id="leader_email" name="leader_email" type="email" maxlength="120" placeholder="you@university.edu.pk" required />
+                <span class="field-error" data-error="leader_email"></span>
+              </div>
+
+              <div class="field">
+                <label for="leader_phone">Phone / WhatsApp <span class="req">*</span></label>
+                <input class="input" id="leader_phone" name="leader_phone" inputmode="tel" maxlength="20" placeholder="0300 1234567" required />
+                <span class="field-error" data-error="leader_phone"></span>
+              </div>
+
+              <div class="field">
+                <label for="cnic">CNIC / B-Form <span class="muted" style="font-weight:500">(optional)</span></label>
+                <input class="input" id="cnic" name="cnic" inputmode="numeric" maxlength="15" placeholder="35202-1234567-1" />
+                <span class="field-error" data-error="cnic"></span>
+              </div>
+
+              <div class="field">
+                <label for="university">University / Institute <span class="req">*</span></label>
+                <input class="input" id="university" name="university" maxlength="120" placeholder="COMSATS University Islamabad, Vehari Campus" required />
+                <span class="field-error" data-error="university"></span>
+              </div>
+
+              <div class="field">
+                <label for="city">City</label>
+                <input class="input" id="city" name="city" maxlength="60" placeholder="Vehari" />
+              </div>
+
+              <div class="field">
+                <label for="discipline">Program / Discipline</label>
+                <input class="input" id="discipline" name="discipline" maxlength="80" placeholder="BS Computer Science" />
+              </div>
+
+              <div class="field">
+                <label for="semester">Semester</label>
+                <input class="input" id="semester" name="semester" maxlength="40" placeholder="5th" />
+              </div>
+            </div>
+
+            <hr class="form-divider" />
+
+            <!-- Step 4 -->
+            <div class="form-step">
+              <span class="step-num">04</span>
+              <div>
+                <h2>Second member <span class="badge" style="margin-left:6px">Optional</span></h2>
+                <p>Skip this if you are entering solo. Teams can have a maximum of two members.</p>
+              </div>
+            </div>
+
+            <div class="field-grid" id="member2-fields">
+              <div class="field">
+                <label for="member2_name">Full name</label>
+                <input class="input" id="member2_name" name="member2_name" maxlength="80" placeholder="Teammate's full name" />
+                <span class="field-error" data-error="member2_name"></span>
+              </div>
+              <div class="field">
+                <label for="member2_email">Email address</label>
+                <input class="input" id="member2_email" name="member2_email" type="email" maxlength="120" placeholder="teammate@university.edu.pk" />
+                <span class="field-error" data-error="member2_email"></span>
+              </div>
+            </div>
+
+            <hr class="form-divider" />
+
+            <div class="field-grid">
+              <div class="field field-full">
+                <label for="heard_from">How did you hear about Prompt Engineering?</label>
+                <select class="select" id="heard_from" name="heard_from">
+                  <option value="">Select (optional)</option>
+                  <option>University announcement</option>
+                  <option>Classmate or friend</option>
+                  <option>Instagram / Facebook</option>
+                  <option>LinkedIn</option>
+                  <option>Previous participant</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" style="margin-top:22px">
+              <label class="checkbox">
+                <input type="checkbox" id="agree" name="agree" />
+                <span>I have read the <a href="/#rules" target="_blank" rel="noopener">competition rules</a>, confirm the information above is accurate, and agree to the organisers' verification and judging decisions.</span>
+              </label>
+              <span class="field-error" data-error="agree"></span>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-lg" type="submit" id="submit-btn">
+                Submit registration<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg>
+              </button>
+              <span class="form-note">You will receive a team code immediately.</span>
+            </div>
+          </form>
+
+          <aside class="summary">
+            <div class="summary-head">
+              <h3>Your registration</h3>
+              <p>Prompt Engineering · December 10 · CUI Vehari</p>
+            </div>
+            <div class="summary-body">
+              <div class="summary-row"><span>Category</span><strong id="sum-category">Not selected</strong></div>
+              <div class="summary-row"><span>Challenge time</span><strong id="sum-duration">—</strong></div>
+              <div class="summary-row"><span>Team size</span><strong id="sum-size">1 member</strong></div>
+              <div class="summary-row"><span>Team name</span><strong id="sum-team">—</strong></div>
+              <div class="summary-row summary-total" style="border-top:1px dashed var(--line-strong);padding-top:16px">
+                <span>Registration fee</span><strong>PKR 1,000</strong>
+              </div>
+            </div>
+            <ul class="summary-list">
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Participation certificate for every member</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Workspace, Wi-Fi and refreshments on campus</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Organisers verify your entry within 48 hours</li>
+              <li><svg class="icon"><use href="/assets/icons.svg#check"></use></svg>Fee covers the whole team and is paid at the desk</li>
+            </ul>
+            <div class="summary-foot">
+              <div class="alert alert-info" style="font-size:.8rem">
+                <svg class="icon"><use href="/assets/icons.svg#shield"></use></svg>
+                <span>Your data is used only for Prompt Engineering participation and is visible to organisers in the admin portal.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Success -->
+        <div id="success-panel" class="success-panel hidden">
+          <div class="success-icon"><svg class="icon"><use href="/assets/icons.svg#check"></use></svg></div>
+          <span class="eyebrow" style="justify-content:center">Registration received</span>
+          <h2 class="section-title" style="font-size:1.8rem;margin-bottom:10px">You're on the list!</h2>
+          <p class="muted" style="margin-bottom:8px">
+            Your entry has reached the Prompt Engineering organisers. Save your team code — you will need it at the
+            registration desk and to track approval.
+          </p>
+          <div class="code-box">
+            <span id="team-code">PE-00-0000</span>
+            <button type="button" id="copy-code" aria-label="Copy team code"><svg class="icon"><use href="/assets/icons.svg#copy"></use></svg></button>
+          </div>
+          <div id="success-details" class="summary-body" style="text-align:left;background:var(--bg-soft);border-radius:14px"></div>
+          <div class="hero-cta" style="margin-top:26px">
+            <a class="btn" href="/status.html">Track my status<svg class="icon"><use href="/assets/icons.svg#arrow-right"></use></svg></a>
+            <a class="btn btn-outline" href="/#categories">Explore categories</a>
+          </div>
+          <button class="link-arrow" type="button" id="register-another" style="margin:22px auto 0;background:none;border:0;cursor:pointer;font-family:inherit">
+            Register another team
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="/assets/cui-emblem.svg" alt="COMSATS University Islamabad, Vehari Campus" />
+            <span class="brand-word">V<span>SPARK</span></span>
+          </div>
+          <p class="footer-about">The official registration portal for the VSPARK 2026 Prompt Engineering competition — Department of Computer Science, COMSATS University Islamabad, Vehari Campus.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#categories">Prompt categories</a></li>
+            <li><a href="/#schedule">Event schedule</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Participants</h5>
+          <ul>
+            <li><a href="/register.html">Register</a></li>
+            <li><a href="/status.html">Track status</a></li>
+            <li><a href="/#rules">Rules &amp; judging</a></li>
+            <li><a href="/admin/login.html">Admin portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul class="footer-contact">
+            <li><svg class="icon"><use href="/assets/icons.svg#pin"></use></svg><span>CUI Vehari, Punjab, Pakistan</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#mail"></use></svg><span>hodes@cuivehari.edu.pk</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#phone"></use></svg><span>(067) 3602803</span></li>
+            <li><svg class="icon"><use href="/assets/icons.svg#globe"></use></svg><span>www.comsats.edu.pk/cs-vhr</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> VSPARK · Department of Computer Science, COMSATS University Islamabad, Vehari Campus.</span>
+        <span>Prompt Engineering registration portal · <a href="/admin/login.html">Organisers</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/ui.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/register.js"></script>
+</body>
+</html>

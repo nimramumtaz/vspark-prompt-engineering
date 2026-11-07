@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="COMSATS University Islamabad, Vehari Campus">
+  <circle cx="48" cy="48" r="45" fill="#ffffff" stroke="#1e40af" stroke-width="2.5"/>
+  <circle cx="48" cy="48" r="38" fill="none" stroke="#1e40af" stroke-width="0.9" stroke-dasharray="2 3"/>
+  <text x="48" y="45" text-anchor="middle" font-family="Sora, Segoe UI, sans-serif" font-size="19" font-weight="700" fill="#0f2a66">CUI</text>
+  <text x="48" y="58" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="6.4" letter-spacing="1.1" fill="#1e40af">COMSATS</text>
+  <text x="48" y="68" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="6.6" letter-spacing="1.6" font-weight="700" fill="#0f2a66">VEHARI</text>
+</svg>
